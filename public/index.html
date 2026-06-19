@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Posts</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Cloud Posts</h1>
+        <p>Image upload + MongoDB + ImageKit — simple full-stack demo</p>
+    </header>
+
+    <main class="container">
+        <section class="card form-card">
+            <h2>Nayi Post Banao</h2>
+            <form id="createForm">
+                <div class="field">
+                    <label for="image">Image choose karo</label>
+                    <input type="file" id="image" name="image" accept="image/*" required>
+                    <img id="preview" class="preview hidden" alt="Preview">
+                </div>
+                <div class="field">
+                    <label for="caption">Caption</label>
+                    <textarea id="caption" name="caption" rows="3" placeholder="Kuch likho..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Upload & Post</button>
+            </form>
+        </section>
+
+        <div id="toast" class="toast hidden"></div>
+
+        <section class="posts-section">
+            <div class="posts-header">
+                <h2>Saari Posts</h2>
+                <span id="postCount" class="badge">0 posts</span>
+            </div>
+            <div id="postsGrid" class="posts-grid">
+                <p class="empty-msg">Abhi koi post nahi hai. Pehli post upload karo!</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
